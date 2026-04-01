@@ -34,8 +34,7 @@ body{
 .logo{
   position: absolute;
   left: 50%;            /* milieu vertical *//* recentre */
-  top:50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 
 
 }
