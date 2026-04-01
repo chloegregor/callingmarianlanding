@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: "PoppinsSemiBoldItalic";
+  src: url("font/BBBPoppinsTN-DisplaySemiBoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PoppinsSemiBold";
+  src: url("font/BBBPoppinsTN-DisplaySemiBold.woff") format("woff");
+}
+
+
+
+body{
+ font-family: 'PoppinsSemiBold'
+}
+
+
+@media (max-width: 768px) {
+  .fond { background-image: url("images/fondmobile.webp") !important;
+
+           }
+}
+
+.fond{
+  background-image: url("images/fondpc.jpg");
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+;}
+
+
+.logo{
+  position: absolute;
+  left: 50%;            /* milieu vertical *//* recentre */
+  top:50%;
+  transform: translate(-50%, -50%);
+
+
+}
+
+.drawer {
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+
+}
+
+
+.drawer.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+

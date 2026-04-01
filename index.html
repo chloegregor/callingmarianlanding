@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full w-full">
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/favicon.ico">
+    <title>Calling Marian / music producer / live shows</title>
+    <meta name="description" content="Calling Marian – techno, acid &amp; electronic music producer and live performer. discover her music on Spotify, Bandcamp &amp; YouTube.">
+  </head>
+      <body class="h-full w-full">
+        <main class="fond">
+          <div class="h-[100px] relative ">
+            <img src="/images/Logo.webp" alt="logo" class="logo h-[50px] ">
+          </div>
+          <div class=" mt-[50px] flex flex-col gap-3  items-center">
+            <div class="flex flex-col items-center">
+              <button id="socialToggle" class="text-white text-[1.8em]">social medias</button>
+              <div id="socialDrawer" class=" drawer flex gap-5 mt-2">
+                <a href="https://www.instagram.com/callingmarian/" target="_blank">
+                  <img src="images/insta.svg" alt="Instagram" class="h-[20px]">
+                </a>
+                <a href="https://www.youtube.com/@CallingMarianMusic" target="_blank">
+                  <img src="images/yt.svg" alt="Youtube" class="h-[20px]">
+                </a>
+                <a href="https://cvntrecords.bandcamp.com/" target="_blank">
+                  <img src="images/bc.svg" alt="Bandcamp" class="h-[20px]">
+                </a>
+                <a href="https://open.spotify.com/intl-fr/artist/5464tjCwWXfpv8foCwWD54" target="_blank">
+                  <img src="images/spot.svg" alt="Spotify" class="h-[20px]">
+                </a>
+                <a href="https://www.bandsintown.com/fr?came_from=257" target="_blank">
+                  <img src="images/bit.svg" alt="Bandsintown" class="h-[20px]">
+                </a>
+              </div>
+            </div>
+            <div class="flex flex-col items-center">
+              <button id="contactsToggle" class="text-white text-[1.8em]">contacts</button>
+              <div id="contactsDrawer" class="drawer flex flex-col gap-2 text-[0.8em] mt-2">
+                <div id="general" class="flex gap-2 text-white">
+                  <p>general inquiries:</p>
+                </div>
+                <div id="booking" class="flex gap-2 text-white">
+                  <p>booking:</p>
+                </div>
+                <div id="publish" class="flex gap-2 text-white">
+                  <p>publishing:</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </main>
+      <footer>
+      </footer>
+      <script>
+        const toggleSocials = document.getElementById('socialToggle');
+        const drawerSocials = document.getElementById('socialDrawer');
+        const toggleContacts = document.getElementById('contactsToggle');
+        const drawerContacts = document.getElementById('contactsDrawer');
+        toggleSocials.addEventListener('click', () => {
+          drawerSocials.classList.toggle('open');
+        });
+        toggleContacts.addEventListener('click', () => {
+          drawerContacts.classList.toggle('open');
+        })
+
+        const emails = [
+        {id: "general", user: "callingmarian", domain: "ikmail.com"},
+        {id: "booking", user: "aurore.voisin", domain: "wspectacle.com"},
+        {id: "publish", user: "catherine.cuny", domain: "publishing.wagram.fr"}
+        ];
+
+        emails.forEach(e => {
+          const container = document.getElementById(e.id);
+          const p = document.createElement("p");
+          p.textContent = `${e.user}@${e.domain}`;
+          container.appendChild(p);
+        });
+      </script>
+    </body>
+</html>
