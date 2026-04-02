@@ -12,8 +12,8 @@
         <main class="fond relative pt-10 flex flex-col">
           <div class="flex-1 ">
             <img src="images/logo.webp" alt="logo" class=" logo lg:h-[70px] md:h-[70px] h-auto max-w-[80%] ">
-            <div class=" flex lg:flex-row  flex-col items-center lg:items-start lg:justify-between lg:gap-[300px] mt-[100px] lg:mt-[0px]">
-              <div class="flex w-[400px] mb-[1em] justify-center ">
+            <div class=" flex lg:flex-row  flex-col items-center lg:items-start lg:justify-between mt-[100px] lg:mt-[0px]">
+              <div class="flex w-[400px] mb-[1em] justify-center lg:order-1 order-2">
                 <div class="flex flex-col " >
                   <button id="socialToggle" class="text-white text-[1.3em]">social medias</button>
                   <div id="socialDrawer" class=" drawer flex gap-5 mt-2">
@@ -35,18 +35,28 @@
                   </div>
                 </div>
               </div>
-              <div class=" flex w-[400px] justify-center ">
+              <div class=" flex w-[400px] min-h-[50px] items-center justify-center relative lg:order-2 order-1">
+                <div class=" flex flex-col gap-3 items-center lg:absolute lg:-bottom-[250px] mb-[20px] relative">
+                  <button id="play" class=" cursor-pointer flex flex-col">
+                    <img  src="images/play.svg" alt="play button" class="w-[50px] h-[50px]">
+                  </button>
+                  <div id="player" class="drawer  lg:absolute top-[50px] lg:w-[400px]">
+                    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1901782208/size=small/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://cvntrecords.bandcamp.com/album/lost-in-the-datacenter-ep">Lost In The Datacenter - EP de Calling Marian</a></iframe>
+                  </div>
+                </div>
+              </div>
+              <div class=" flex w-[400px] justify-center  order-3">
                 <div class="flex flex-col ">
                   <button id="contactsToggle" class="text-white text-[1.3em]">contacts</button>
-                  <div id="contactsDrawer" class="drawer flex flex-col gap-2 text-[0.8em] mt-2">
+                  <div id="contactsDrawer" class="drawer flex flex-col gap-2 text-[0.8em] mt-2 items-center">
                     <div id="general" class="flex gap-2 text-white">
-                      <p>general inquiries:</p>
+                      <p >general inquiries</p>
                     </div>
                     <div id="booking" class="flex gap-2 text-white">
-                      <p>booking:</p>
+                      <p >booking</p>
                     </div>
                     <div id="publish" class="flex gap-2 text-white">
-                      <p>publishing:</p>
+                      <p >publishing</p>
                     </div>
                   </div>
 
@@ -54,9 +64,7 @@
               </div>
             </div>
           </div>
-          <div class="w-[42px] overflow-hidden ">
-            <iframe style="border: 0; width: 700px; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1901782208/size=small/bgcol=333333/linkcol=ffffff/transparent=true/" seamless><a href="https://cvntrecords.bandcamp.com/album/lost-in-the-datacenter-ep">Lost In The Datacenter - EP de Calling Marian</a></iframe>
-          </div>
+
         </main>
         <footer>
       </footer>
@@ -65,11 +73,19 @@
         const drawerSocials = document.getElementById('socialDrawer');
         const toggleContacts = document.getElementById('contactsToggle');
         const drawerContacts = document.getElementById('contactsDrawer');
+        const play = document.getElementById('play')
+        const player = document.getElementById('player')
+
         toggleSocials.addEventListener('click', () => {
           drawerSocials.classList.toggle('open');
         });
         toggleContacts.addEventListener('click', () => {
           drawerContacts.classList.toggle('open');
+        })
+
+        play.addEventListener('click', () => {
+          player.classList.toggle('open')
+          console.log("bjr")
         })
 
         const emails = [
@@ -83,7 +99,11 @@
           const p = document.createElement("p");
           p.textContent = `${e.user}@${e.domain}`;
           container.appendChild(p);
+          p.classList.add('regular')
         });
+
+
+
       </script>
     </body>
 </html>

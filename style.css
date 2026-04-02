@@ -10,6 +10,12 @@
   src: url("font/BBBPoppinsTN-DisplaySemiBold.woff") format("woff");
 }
 
+@font-face {
+  font-family: "PoppinsRegular";
+  src: url("font/BBBPoppinsTN-TextRegular.woff") format("woff");
+}
+
+
 
 
 body{
@@ -42,25 +48,31 @@ body{
 .play{
   position: absolute;
   left: 50%;
-  top: 50% ;           /* milieu vertical *//* recentre */
   transform: translate(-50%, -50%);
-
-
 }
 
 .drawer {
+  max-height: 0px;
   opacity: 0;
-  transition: all 0.3s ease;
+  transform: translateY(-5px);
+  transition: all 0.7s ease;
   pointer-events: none;
-
 }
-
-
 .drawer.open {
+  max-height: 100px;
   opacity: 1;
+  transform: translateY(0);
   pointer-events: auto;
 }
 
 ::selection {
   background-color: #ff4400; /* couleur du surlignage */
+}
+
+.regular{
+  font-family: "PoppinsRegular";
+}
+
+.italic{
+  font-family:"PoppinsSemiBoldItalic"
 }
