@@ -84,8 +84,8 @@ body{
   transition: fill 0.2s ease
 }
 
-#play:hover svg  {
-  fill: #ff4400;
+@media (hover: hover) {
+  #play:hover svg { fill: #ff4400; }
 }
 
 #play.active svg  {

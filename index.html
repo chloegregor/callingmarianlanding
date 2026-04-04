@@ -19,7 +19,7 @@
             <div class=" flex lg:flex-row  lanscape:flex-row flex-col items-center lg:items-start lg:justify-between  mt-[100px] lg:mt-[0px]">
               <div class="flex w-[400px] mb-[1em] justify-center lg:order-1 order-2">
                 <div class="flex flex-col " >
-                  <button id="socialToggle" class="text-white text-[1.3em] hover:text-[#ff4400] ">social medias</button>
+                  <button id="socialToggle" class="text-white text-[1.3em] lg:hover:text-[#ff4400] ">social medias</button>
                   <div id="socialDrawer" class=" drawer flex gap-5 mt-2">
                     <a href="https://www.instagram.com/callingmarian/" target="_blank">
                       <img src="images/insta.svg" alt="Instagram" class="h-[20px]">
@@ -53,7 +53,7 @@
               </div>
               <div class=" flex w-[400px] justify-center  order-3">
                 <div class="flex flex-col ">
-                  <button id="contactsToggle" class="text-white text-[1.3em] hover:text-[#ff4400]">contacts</button>
+                  <button id="contactsToggle" class="text-white text-[1.3em] lg:hover:text-[#ff4400]">contacts</button>
                   <div id="contactsDrawer" class="drawer flex flex-col gap-2 text-[0.8em] mt-2 items-center">
                     <div id="general" class="flex gap-2 text-white">
                       <p >general inquiries</p>
@@ -84,7 +84,7 @@
 
       toggleSocials.addEventListener('click', () => {
         drawerSocials.classList.toggle('open');
-        // toggle la couleur uniquement si le drawer est ouvert
+
         if (drawerSocials.classList.contains('open')) {
           toggleSocials.classList.add('text-[#ff4400]');
         } else {
@@ -103,7 +103,7 @@
 
       play.addEventListener('click', () => {
         player.classList.toggle('open');
-        // toggle couleur/état active séparément
+
         play.classList.toggle('active');
       });
 
