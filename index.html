@@ -82,20 +82,30 @@
         const play = document.getElementById('play')
         const player = document.getElementById('player')
 
-        toggleSocials.addEventListener('click', () => {
-          drawerSocials.classList.toggle('open');
-          toggleSocials.classList.toggle('text-[#ff4400]')
-        });
-        toggleContacts.addEventListener('click', () => {
-          drawerContacts.classList.toggle('open');
-          toggleContacts.classList.toggle('text-[#ff4400]')
-        })
+      toggleSocials.addEventListener('click', () => {
+        drawerSocials.classList.toggle('open');
+        // toggle la couleur uniquement si le drawer est ouvert
+        if (drawerSocials.classList.contains('open')) {
+          toggleSocials.classList.add('text-[#ff4400]');
+        } else {
+          toggleSocials.classList.remove('text-[#ff4400]');
+        }
+      });
 
-        play.addEventListener('click', () => {
-          player.classList.toggle('open')
-          play.classList.toggle('active')
+      toggleContacts.addEventListener('click', () => {
+        drawerContacts.classList.toggle('open');
+        if (drawerContacts.classList.contains('open')) {
+          toggleContacts.classList.add('text-[#ff4400]');
+        } else {
+          toggleContacts.classList.remove('text-[#ff4400]');
+        }
+      });
 
-        })
+      play.addEventListener('click', () => {
+        player.classList.toggle('open');
+        // toggle couleur/état active séparément
+        play.classList.toggle('active');
+      });
 
         const emails = [
         {id: "general", user: "callingmarian", domain: "ikmail.com"},
