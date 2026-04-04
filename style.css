@@ -99,3 +99,28 @@ body{
 #contactsToggle{
   transition: color 0.2s ease
 }
+
+h1 {
+  font-family: "PoppinsRegular";
+
+  letter-spacing: 0;
+  color: #ffffff;
+  opacity: 0.6
+
+}
+
+h2 {
+  font-family: "PoppinsRegular";
+
+  letter-spacing: 0;
+  color: #ffffff;
+  opacity:0.6;
+}
+
+p{
+  font-family: "PoppinsRegular";
+
+  letter-spacing: 0;
+  color: #ffffff;
+  opacity: 0.6;
+}
