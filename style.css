@@ -19,7 +19,7 @@
 
 
 body{
- font-family: 'PoppinsSemiBold'
+ font-family: 'PoppinsSemiBold';
 }
 
 
@@ -69,10 +69,33 @@ body{
   background-color: #ff4400; /* couleur du surlignage */
 }
 
+
+
 .regular{
   font-family: "PoppinsRegular";
 }
 
 .italic{
   font-family:"PoppinsSemiBoldItalic"
+}
+
+#play svg  {
+  fill: white;
+  transition: fill 0.2s ease
+}
+
+#play:hover svg  {
+  fill: #ff4400;
+}
+
+#play.active svg  {
+  fill: #ff4400;
+}
+
+#socialToggle{
+  transition: color 0.2s ease
+}
+
+#contactsToggle{
+  transition: color 0.2s ease
 }
